@@ -1,0 +1,6 @@
+{
+  "name": "Binary - Template Clone",
+  "description": "Clone fiel da página inicial do template Binary por TEMPLATED em Português do Brasil, com seções alternadas, menu off-canvas e formulário de contato integrado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

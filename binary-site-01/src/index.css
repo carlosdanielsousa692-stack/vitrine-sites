@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+  }
+  body {
+    background-color: #ffffff;
+    color: #444;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.85em;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Header styles matching original TEMPLATED Binary */
+#header {
+  background: #1c1c1c;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: default;
+  height: 4.25em;
+  left: 0;
+  line-height: 4.25em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10001;
+}
+
+@media (max-width: 980px) {
+  #header {
+    height: 44px;
+    line-height: 44px;
+  }
+}
+
+/* Banner */
+#banner {
+  background: linear-gradient(180deg, #1b1b1b 0%, #141414 65%, #0b0b0b 100%);
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  cursor: default;
+  margin-top: 4.25em;
+}
+
+@media (max-width: 980px) {
+  #banner {
+    margin-top: 44px;
+  }
+}
+
+/* Post Split Sections */
+.post {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 4.25em);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 980px) {
+  .post {
+    flex-direction: column !important;
+    min-height: auto;
+  }
+}
+
+/* Infinite Logo Marquee Bar */
+@keyframes logo-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-logo-marquee {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-logo-marquee {
+    animation: none;
+  }
+}
